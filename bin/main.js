@@ -1,7 +1,7 @@
 const program = require('commander')
-const CustomersFetcher = require('../src/Services/CustomersFetcher')
-const CustomersLocator = require('../src/Services/CustomersLocator')
-const EarthPosition = require('../src/Models/EarthPosition')
+const CustomersFetcher = require('../src/services/customersFetcher')
+const CustomersLocator = require('../src/services/customersLocator')
+const EarthPosition = require('../src/models/earthPosition')
 const DEFAULT_FILE_LOCATION = 'https://gist.githubusercontent.com/brianw/19896c50afa89ad4dec3/raw/6c11047887a03483c50017c1d451667fd62a53ca/gistfile1.txt'
 const DEFAULT_DISTANCE = 100
 
