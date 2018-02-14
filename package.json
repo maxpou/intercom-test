@@ -1,0 +1,27 @@
+{
+  "name": "intercom-exam",
+  "version": "0.0.1",
+  "description": "https://blog.intercom.com/how-we-hire-engineers-part-1/",
+  "main": "bin/main.js",
+  "bin": {
+    "intercom-exam": "main.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "standard"
+  },
+  "author": "Maxence POUTORD <maxence.poutord@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "joi": "^13.1.2",
+    "node-fetch": "^2.0.0"
+  },
+  "devDependencies": {
+    "jest": "^22.3.0",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "env": [ "jest" ]
+  }
+}
