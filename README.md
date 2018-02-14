@@ -1,8 +1,10 @@
+[![Build Status](https://travis-ci.org/maxpou/intercom-test.svg?branch=master)](https://travis-ci.org/maxpou/intercom-test) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+
 # Intercom Test
 
 ## Customer Records
 
-### Installation&sing
+### Installation & running
 
 1. `npm install`: install dev dependencies
 2. `node bin/main.js`: execute program *with defaults arguments*
