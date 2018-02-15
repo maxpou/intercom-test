@@ -7,7 +7,7 @@ const DEFAULT_DISTANCE = 100
 
 program
   .option('-f, --file [fileUrl]', 'customer file url', DEFAULT_FILE_LOCATION)
-  .option('-d, --distance [fileUrl]', 'distance', DEFAULT_DISTANCE)
+  .option('-d, --distance [fileUrl]', 'distance in km', DEFAULT_DISTANCE)
   .parse(process.argv)
 
 CustomersFetcher.getCustomersFromFile(program.file).then(customers => {

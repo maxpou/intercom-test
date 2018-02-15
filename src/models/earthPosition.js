@@ -12,7 +12,7 @@ module.exports = class EarthPosition {
   }
 
   /**
-   *
+   * Get distance (in meters) between two EarthPosition
    * @param {EarthPosition} otherCoordinate
    * @returns {number} distance in meters
    */
