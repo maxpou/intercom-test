@@ -1,11 +1,18 @@
 const customersFetcher = require('../../src/services/customersFetcher')
+const customersFileParser = require('../../src/services/customersFileParser')
 
-it('customersFetcher should retreive customers through network', async () => {
-  expect.assertions(1);
+customersFileParser.parseText = jest.fn()
 
-  const result = await customersFetcher.getCustomersFromFile('http://path.to/file.txt')
-  console.log('result', result);
+it('customersFetcher.getCustomersFromFile() should retreive customers through network', async () => {
+  expect.assertions(1)
+  await customersFetcher.getCustomersFromFile('http://path.to/file.txt')
+  expect(customersFileParser.parseText).toBeCalledWith('{"latitude": "52.2559432", "user_id": 9, "name": "Jack Dempsey", "longitude": "-7.1048927"}')
+})
 
-  // then customerFileParser.parseText should be called with mocked response
-  expect(result).toEqual('Mark');
-});
+it('customersFetcher.getCustomersFromFile() should reject when an error occur', async () => {
+  expect.assertions(1)
+
+  await expect(customersFetcher.getCustomersFromFile('http://path.to/errored-file.txt')).rejects.toEqual(
+    new Error('Problem occur when loading the file')
+  )
+})
