@@ -1,4 +1,11 @@
+const customersFetcher = require('../../src/services/customersFetcher')
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1 + 1).toBe(2)
-})
+it('customersFetcher should retreive customers through network', async () => {
+  expect.assertions(1);
+
+  const result = await customersFetcher.getCustomersFromFile('http://path.to/file.txt')
+  console.log('result', result);
+
+  // then customerFileParser.parseText should be called with mocked response
+  expect(result).toEqual('Mark');
+});
